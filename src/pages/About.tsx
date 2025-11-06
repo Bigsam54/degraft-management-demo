@@ -153,7 +153,7 @@ export default function About() {
       </section>
 
       {/* Regional Presence */}
-      <section className="mb-20 bg-gradient-to-br from-brand to-brand-700 text-brand-foreground py-16">
+      <section className="mb-20 bg-brand text-brand-foreground py-16">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="mb-4 text-brand-foreground">Global Reach, Local Support</h2>

@@ -71,7 +71,6 @@ export default function Solutions() {
                       className="h-40 w-full object-cover"
                       loading="lazy"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-bg via-bg/40 to-transparent" aria-hidden="true" />
                   </div>
                 )}
                 <div className={`mb-6 flex h-16 w-16 items-center justify-center rounded-xl bg-${solution.color}/10`}>
@@ -94,15 +93,7 @@ export default function Solutions() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="mt-20 text-center rounded-2xl bg-secondary/50 p-8 md:p-12 relative overflow-hidden">
-          <img
-            src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=1920"
-            alt="Collaborative business consultation"
-            className="absolute inset-0 h-full w-full object-cover -z-20"
-            loading="lazy"
-          />
-          <div className="absolute inset-0 bg-secondary/80 -z-10" aria-hidden="true" />
-
+        <div className="mt-20 text-center rounded-2xl bg-secondary/30 p-8 md:p-12 relative overflow-hidden">
           <div className="relative">
             <h3 className="text-2xl md:text-3xl font-bold mb-4">Not sure which solution fits?</h3>
             <p className="text-lg text-muted mb-6">

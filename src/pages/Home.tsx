@@ -149,15 +149,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
-        <img
-          src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1920"
-          alt="Professional team collaborating on digital workspace"
-          className="absolute inset-0 h-full w-full object-cover -z-20"
-          loading="eager"
-        />
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/75 via-slate-900/50 to-transparent -z-10" />
-
+      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 bg-bg">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
     <div className="grid lg:grid-cols-2 gap-12 items-center">
       <div>
@@ -189,7 +181,7 @@ export default function Home() {
         <div className="space-y-6">
           <div className="flex items-center justify-between">
             <h3 className="text-lg font-semibold">Platform Overview</h3>
-            <Badge variant="accent">Live</Badge>
+            <Badge variant="default">Live</Badge>
           </div>
           
           <div className="grid grid-cols-2 gap-4">
@@ -280,16 +272,8 @@ export default function Home() {
       </section>
 
       {/* Solutions Preview */}
-      <section className="relative py-16 md:py-24 overflow-hidden">
-        <img
-          src={solutionBackgrounds[activeTab]}
-          alt={solutionBackgroundAlts[activeTab]}
-          className="absolute inset-0 h-full w-full object-cover -z-20"
-          loading="lazy"
-        />
-        <div className="absolute inset-0 bg-white/90 backdrop-blur-md -z-10" aria-hidden="true" />
-
-        <div className="mx-auto max-w-7xl px-6 lg:px-8 relative">
+      <section className="relative py-16 md:py-24 bg-secondary/40">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="mb-4">Solutions that work together</h2>
             <p className="text-lg text-muted max-w-2xl mx-auto">
@@ -303,10 +287,10 @@ export default function Home() {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id as typeof activeTab)}
-                className={`px-6 py-3 rounded-lg font-medium transition-all ${
+                    className={`px-6 py-3 rounded-lg font-medium transition-all ${
                   activeTab === tab.id
                     ? "bg-brand text-brand-foreground shadow-md border-2 border-brand"
-                    : "bg-white/80 backdrop-blur-sm text-muted hover:bg-white/90"
+                    : "bg-panel border border-border text-muted hover:bg-secondary"
                 }`}
               >
                 {tab.label}
@@ -340,16 +324,8 @@ export default function Home() {
       </section>
 
       {/* Impact Stats */}
-      <section className="relative py-16 md:py-24 overflow-hidden">
-        <img
-          src="https://images.pexels.com/photos/669622/pexels-photo-669622.jpeg?auto=compress&cs=tinysrgb&w=1920"
-          alt="Business growth and financial success metrics"
-          className="absolute inset-0 h-full w-full object-cover -z-20"
-          loading="lazy"
-        />
-        <div className="absolute inset-0 bg-white/80 backdrop-blur-sm -z-10" aria-hidden="true" />
-
-        <div className="mx-auto max-w-7xl px-6 lg:px-8 relative">
+      <section className="relative py-16 md:py-24 bg-bg">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="mb-4">Measurable Impact</h2>
             <p className="text-lg text-muted">Real results from our customers</p>
@@ -364,7 +340,7 @@ export default function Home() {
       </section>
 
       {/* Before vs After */}
-      <section className="py-16 md:py-24 bg-secondary/30">
+      <section className="py-16 md:py-24 bg-secondary/20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="mb-4">Transform Your Operations</h2>
@@ -404,7 +380,7 @@ export default function Home() {
             </div>
 
             {/* After */}
-            <div className="rounded-xl bg-gradient-to-br from-brand/10 to-brand/5 border border-brand/20 p-8 overflow-hidden">
+            <div className="rounded-xl bg-brand/5 border border-brand/30 p-8 overflow-hidden">
               <img
                 src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800"
                 alt="Modern digital workspace with team collaboration"

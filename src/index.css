@@ -8,20 +8,20 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Brand Colors - Emerald Green Palette */
-    --brand: 173 94% 24%;           /* #0F766E */
-    --brand-700: 173 86% 21%;       /* #0B5F59 */
+    /* Brand Colors - Bright Modern Green Palette */
+    --brand: 142 76% 36%;           /* #10B981 - brighter emerald */
+    --brand-700: 142 70% 32%;       /* #059669 - slightly darker */
     --brand-foreground: 0 0% 100%;  /* white text on brand */
     
-    /* Neutral Scale */
+    /* Neutral Scale - Very Bright */
     --text: 222 47% 11%;            /* #0F172A - slate-900 */
-    --muted: 215 16% 47%;           /* #475569 - slate-600 */
-    --bg: 210 40% 98%;              /* #F8FAFC - slate-50 */
+    --muted: 215 14% 50%;           /* #64748B - slate-500 */
+    --bg: 0 0% 100%;                /* #FFFFFF - pure white */
     --panel: 0 0% 100%;             /* #FFFFFF */
     
-    /* Accent Colors */
-    --accent-gold: 47 100% 44%;     /* #E0B100 */
-    --accent-blue: 199 89% 48%;     /* #0EA5E9 */
+    /* Accent Colors - Bright */
+    --accent-gold: 43 96% 56%;      /* #F59E0B - brighter amber */
+    --accent-blue: 199 89% 48%;     /* #0EA5E9 - sky blue */
     
     /* Semantic Mappings */
     --background: var(--bg);
@@ -36,10 +36,10 @@ All colors MUST be HSL.
     --primary: var(--brand);
     --primary-foreground: var(--brand-foreground);
     
-    --secondary: 210 40% 96%;
+    --secondary: 210 20% 98%;       /* Very light gray */
     --secondary-foreground: var(--text);
     
-    --muted-bg: 210 40% 96%;
+    --muted-bg: 210 20% 98%;        /* Very light gray */
     --muted-foreground: var(--muted);
     
     --accent: var(--accent-blue);
@@ -48,14 +48,14 @@ All colors MUST be HSL.
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
     
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
+    --border: 214 20% 96%;          /* Lighter borders */
+    --input: 214 20% 96%;
     --ring: var(--brand);
     
     --radius: 1rem;
     
-    /* Shadows */
-    --shadow-card: 0 12px 30px rgba(2, 8, 23, 0.08);
+    /* Shadows - Softer and lighter */
+    --shadow-card: 0 4px 20px rgba(16, 185, 129, 0.08);
   }
 }
 
@@ -67,6 +67,7 @@ All colors MUST be HSL.
   body {
     @apply bg-bg text-text font-sans antialiased;
     font-family: 'Inter', sans-serif;
+    background-color: hsl(var(--bg));
   }
   
   h1, h2, h3, h4, h5, h6 {

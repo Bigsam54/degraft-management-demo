@@ -66,7 +66,6 @@ export default function Webinars() {
                   className="h-56 w-full object-cover transition-transform duration-300 group-hover:scale-105"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent" />
                 <span
                   className={`absolute top-4 right-4 inline-flex items-center rounded-full px-3 py-1 text-xs font-medium shadow-lg ${
                     webinar.status === "upcoming"

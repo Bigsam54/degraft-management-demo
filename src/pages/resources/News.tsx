@@ -81,7 +81,6 @@ export default function News() {
                   className="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent" />
               </div>
               
               <div className="p-6">
@@ -109,7 +108,7 @@ export default function News() {
         </div>
 
         {/* Newsletter Signup */}
-        <div className="mt-16 text-center rounded-2xl bg-gradient-to-br from-brand/10 to-brand/5 border border-brand/20 p-8 md:p-12">
+        <div className="mt-16 text-center rounded-2xl bg-brand/5 border border-brand/30 p-8 md:p-12">
           <h3 className="text-2xl md:text-3xl font-bold mb-4">
             Stay in the loop
           </h3>

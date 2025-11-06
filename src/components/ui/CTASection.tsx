@@ -31,8 +31,8 @@ export function CTASection({
           className={cn(
             "relative overflow-hidden rounded-2xl p-8 md:p-12 text-center",
             backgroundImageSrc
-              ? ""
-              : "bg-gradient-to-br from-brand to-brand-700"
+              ? "bg-panel"
+              : "bg-brand"
           )}
         >
           {backgroundImageSrc && (
@@ -40,24 +40,24 @@ export function CTASection({
               <img
                 src={backgroundImageSrc}
                 alt={backgroundImageAlt ?? title}
-                className="absolute inset-0 h-full w-full object-cover -z-20"
+                className="absolute inset-0 h-full w-full object-cover opacity-10 -z-20"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-slate-900/70 -z-10" aria-hidden="true" />
+              <div className="absolute inset-0 bg-brand/5 -z-10" aria-hidden="true" />
             </>
           )}
 
           <div className="relative">
             <h2 className={cn(
               "text-3xl md:text-4xl font-bold mb-4",
-              backgroundImageSrc ? "text-white" : "text-brand-foreground"
+              backgroundImageSrc ? "text-text" : "text-brand-foreground"
             )}>
               {title}
             </h2>
             {description && (
               <p className={cn(
                 "text-lg mb-8 max-w-2xl mx-auto",
-                backgroundImageSrc ? "text-white/90" : "text-brand-foreground/90"
+                backgroundImageSrc ? "text-muted" : "text-brand-foreground/90"
               )}>
                 {description}
               </p>
@@ -66,10 +66,10 @@ export function CTASection({
               <Button
                 asChild
                 size="lg"
-                variant="secondary"
+                variant={backgroundImageSrc ? "default" : "secondary"}
                 className={cn(
                   backgroundImageSrc
-                    ? "bg-white text-slate-900 hover:bg-white/90"
+                    ? ""
                     : "bg-panel text-brand hover:bg-panel/90"
                 )}
               >
@@ -85,7 +85,7 @@ export function CTASection({
                   variant="outline"
                   className={cn(
                     backgroundImageSrc
-                      ? "border-white/30 text-white hover:bg-white/10"
+                      ? "border-border text-text hover:bg-secondary"
                       : "border-brand-foreground/30 text-brand-foreground hover:bg-brand-foreground/10"
                   )}
                 >

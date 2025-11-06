@@ -53,7 +53,7 @@ export default function Videos() {
               className="group cursor-pointer"
             >
               {/* Thumbnail */}
-              <div className="relative aspect-video rounded-xl bg-gradient-to-br from-brand/20 to-brand/5 border border-border mb-4 overflow-hidden">
+              <div className="relative aspect-video rounded-xl bg-brand/10 border border-border mb-4 overflow-hidden">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="h-16 w-16 rounded-full bg-brand/90 flex items-center justify-center group-hover:scale-110 transition-transform">
                     <Play className="h-8 w-8 text-brand-foreground ml-1" />

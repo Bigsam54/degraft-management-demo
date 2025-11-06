@@ -78,7 +78,6 @@ export default function Industries() {
                       className="h-44 w-full object-cover"
                       loading="lazy"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-bg via-bg/40 to-transparent" aria-hidden="true" />
                   </div>
                 )}
                 <div className="grid lg:grid-cols-3 gap-8">
@@ -136,15 +135,7 @@ export default function Industries() {
         </div>
 
         {/* Bottom Info */}
-        <div className="mt-20 text-center rounded-2xl bg-secondary/50 p-8 md:p-12 relative overflow-hidden">
-          <img
-            src="https://images.pexels.com/photos/3182796/pexels-photo-3182796.jpeg?auto=compress&cs=tinysrgb&w=1920"
-            alt="Additional business sectors and industries"
-            className="absolute inset-0 h-full w-full object-cover -z-20"
-            loading="lazy"
-          />
-          <div className="absolute inset-0 bg-secondary/85 -z-10" aria-hidden="true" />
-
+        <div className="mt-20 text-center rounded-2xl bg-secondary/30 p-8 md:p-12 relative overflow-hidden">
           <div className="relative">
             <h3 className="text-2xl md:text-3xl font-bold mb-4">
               Don't see your industry?

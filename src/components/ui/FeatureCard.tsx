@@ -33,7 +33,6 @@ export function FeatureCard({
             className="h-40 w-full object-cover transition-transform duration-300 hover:scale-105"
             loading="lazy"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent" aria-hidden="true" />
           <div className="absolute bottom-4 left-6 flex h-12 w-12 items-center justify-center rounded-lg bg-brand shadow-lg">
             <Icon className="h-6 w-6 text-brand-foreground" />
           </div>
