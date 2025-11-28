@@ -1,87 +1,98 @@
-import { ArrowRight, Globe, Building2, GraduationCap, Recycle } from "lucide-react";
+import { ArrowRight, Globe, Landmark, Microscope, Leaf, Flag } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 const partnerCategories = [
   {
     title: "United Nations Affiliates",
-    icon: Globe,
+    icon: Flag,
     partners: [
       {
         name: "UN-HABITAT",
         fullName: "United Nations Human Settlements Programme",
         tagline: "FOR A BETTER URBAN FUTURE",
-        logoPath: "/partners/un-habitat.png", // Add logo path when available
+        logoPath: "/partners/un-habitat.png",
+        website: "https://unhabitat.org",
       },
       {
         name: "United Nations Global Compact",
         fullName: "United Nations Global Compact",
-        logoPath: "/partners/un-global-compact.png",
+        logoPath: "/partners/un-global-compact.svg",
+        website: "https://unglobalcompact.org",
       },
       {
         name: "UNOSSC",
         fullName: "United Nations Office for South-South Cooperation",
         logoPath: "/partners/unossc.png",
+        website: "https://www.unsouthsouth.org",
       },
     ],
   },
   {
     title: "Government & Municipal Partners",
-    icon: Building2,
+    icon: Landmark,
     partners: [
       {
         name: "County Government of Kiambu",
         fullName: "County Government of Kiambu",
         tagline: "URUTAGWO MWIRUTI",
-        logoPath: "/partners/kiambu-county.png",
+        logoPath: "/partners/kiambu-county.jpg",
+        website: "https://kiambu.go.ke",
       },
     ],
   },
   {
     title: "Waste Management & Circular Economy",
-    icon: Recycle,
+    icon: Leaf,
     partners: [
       {
         name: "Kenya Plastics Pact",
         fullName: "Kenya Plastics Pact",
-        logoPath: "/partners/kenya-plastics-pact.png",
+        logoPath: "/partners/kenya-plastics-pact.svg",
+        website: "https://www.kenyaplasticspact.org",
       },
       {
         name: "Waste Wise Cities",
         fullName: "Waste Wise Cities",
-        logoPath: "/partners/waste-wise-cities.png",
+        logoPath: "/partners/waste-wise-cities.svg",
+        website: "https://www.unep.org/explore-topics/resource-efficiency/what-we-do/cities/waste-wise-cities",
       },
       {
         name: "Circular Economy Network",
         fullName: "Circular Economy Network",
-        logoPath: "/partners/circular-economy-network.png",
+        logoPath: "/partners/circular-economy-network.svg",
+        website: "https://www.circulareconomynetwork.org",
       },
       {
         name: "UK Circular Plastics Network",
         fullName: "UK Circular Plastics Network",
-        logoPath: "/partners/uk-circular-plastics-network.png",
+        logoPath: "/partners/uk-circular-plastics-network.svg",
+        website: "https://www.ukcpn.co.uk",
       },
       {
         name: "ISWA",
         fullName: "International Solid Waste Association",
-        logoPath: "/partners/iswa.png",
+        logoPath: "/partners/iswa.svg",
+        website: "https://www.iswa.org",
       },
     ],
   },
   {
     title: "Academic & Research Partners",
-    icon: GraduationCap,
+    icon: Microscope,
     partners: [
       {
         name: "University of East London",
         fullName: "University of East London",
-        logoPath: "/partners/university-east-london.png",
+        logoPath: "/partners/university-east-london.svg",
+        website: "https://www.uel.ac.uk",
       },
       {
         name: "arena",
         fullName: "Advancing Resource Efficiency & Urban Ecology Innovations",
         tagline: "advancing resource efficiency and urban ecology innovations",
-        logoPath: "/partners/arena.png",
+        logoPath: "/partners/arena.svg",
+        website: "https://www.uel.ac.uk/research/arena",
       },
     ],
   },
@@ -111,15 +122,20 @@ export default function Partners() {
                   </div>
                   <h2 className="text-2xl md:text-3xl font-semibold">{category.title}</h2>
                 </div>
-                
+
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                   {category.partners.map((partner, partnerIndex) => (
                     <div
                       key={partnerIndex}
                       className="rounded-xl bg-panel border border-border p-6 shadow-card hover:shadow-lg transition-all group"
                     >
-                      {/* Logo Container */}
-                      <div className="mb-4 h-24 flex items-center justify-center">
+                      {/* Logo Container - Clickable */}
+                      <a
+                        href={partner.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block mb-4 h-24 flex items-center justify-center"
+                      >
                         {partner.logoPath ? (
                           <img
                             src={partner.logoPath}
@@ -137,18 +153,25 @@ export default function Partners() {
                             <IconComponent className="h-8 w-8 text-brand" />
                           </div>
                         </div>
-                      </div>
+                      </a>
 
-                      {/* Partner Info */}
-                      <h3 className="font-semibold text-lg mb-1 group-hover:text-brand transition-colors">
-                        {partner.name}
-                      </h3>
-                      {partner.fullName && partner.fullName !== partner.name && (
-                        <p className="text-xs text-muted mb-2">{partner.fullName}</p>
-                      )}
-                      {partner.tagline && (
-                        <p className="text-xs text-muted italic">{partner.tagline}</p>
-                      )}
+                      {/* Partner Info - Clickable */}
+                      <a
+                        href={partner.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block"
+                      >
+                        <h3 className="font-semibold text-lg mb-1 group-hover:text-brand transition-colors">
+                          {partner.name}
+                        </h3>
+                        {partner.fullName && partner.fullName !== partner.name && (
+                          <p className="text-xs text-muted mb-2">{partner.fullName}</p>
+                        )}
+                        {partner.tagline && (
+                          <p className="text-xs text-muted italic">{partner.tagline}</p>
+                        )}
+                      </a>
                     </div>
                   ))}
                 </div>
@@ -165,7 +188,7 @@ export default function Partners() {
           <p className="text-lg text-brand-foreground/90 mb-8 max-w-2xl mx-auto">
             Interested in collaborating with De-Graft? We're always looking for innovative partners to advance sustainable resource management.
           </p>
-          
+
           <Button
             asChild
             size="lg"
