@@ -10,9 +10,11 @@ export function Footer() {
           {/* Company Info */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand text-brand-foreground font-bold text-xl">
-                DG
-              </div>
+              <img
+                src="/favicon.png"
+                alt="De-Graft Management"
+                className="h-10 w-10 rounded-lg object-contain bg-white"
+              />
               <span className="font-heading font-semibold text-lg">
                 De-Graft
               </span>

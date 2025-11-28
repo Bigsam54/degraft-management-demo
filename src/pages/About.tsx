@@ -2,10 +2,30 @@ import { Award, MapPin } from "lucide-react";
 import { CTASection } from "@/components/ui/CTASection";
 
 const awards = [
-  { title: "PropTech Innovation of the Year", year: "2024" },
-  { title: "ESG Impact Award", year: "2023" },
-  { title: "GovTech Pilot Winner", year: "2023" },
-  { title: "Customer Choice Award", year: "2024" },
+  {
+    title: "PropTech Innovation of the Year",
+    year: "2024",
+    imageSrc: "/awards/proptech-innovation-2024.png",
+    imageAlt: "PropTech Innovation Award 2024"
+  },
+  {
+    title: "ESG Impact Award",
+    year: "2023",
+    imageSrc: "/awards/esg-impact-2023.png",
+    imageAlt: "ESG Impact Award 2023 for sustainability"
+  },
+  {
+    title: "GovTech Pilot Winner",
+    year: "2023",
+    imageSrc: "/awards/govtech-pilot-2023.png",
+    imageAlt: "GovTech Pilot Winner Award 2023"
+  },
+  {
+    title: "Customer Choice Award",
+    year: "2024",
+    imageSrc: "/awards/customer-choice-2024.png",
+    imageAlt: "Customer Choice Award 2024"
+  },
 ];
 
 const team = [
@@ -112,9 +132,17 @@ export default function About() {
             {awards.map((award, index) => (
               <div
                 key={index}
-                className="rounded-xl bg-panel border border-border p-6 text-center"
+                className="rounded-xl bg-panel border border-border p-6 text-center overflow-hidden"
               >
-                <Award className="h-12 w-12 text-accent-gold mx-auto mb-4" />
+                <img
+                  src={award.imageSrc}
+                  alt={award.imageAlt}
+                  className="-mx-6 -mt-6 mb-4 h-28 w-full object-cover"
+                  loading="lazy"
+                />
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-accent-gold/20 mx-auto mb-4">
+                  <Award className="h-6 w-6 text-accent-gold" />
+                </div>
                 <h4 className="font-semibold mb-1">{award.title}</h4>
                 <p className="text-sm text-muted">{award.year}</p>
               </div>
@@ -175,13 +203,13 @@ export default function About() {
               <h3 className="text-xl font-semibold mb-1">London</h3>
               <p className="text-sm text-brand-foreground/80">UK Headquarters</p>
             </div>
-            
+
             <div className="text-center">
               <MapPin className="h-12 w-12 mx-auto mb-3 text-brand-foreground/80" />
               <h3 className="text-xl font-semibold mb-1">Accra</h3>
               <p className="text-sm text-brand-foreground/80">West Africa Hub</p>
             </div>
-            
+
             <div className="text-center">
               <MapPin className="h-12 w-12 mx-auto mb-3 text-brand-foreground/80" />
               <h3 className="text-xl font-semibold mb-1">Nairobi</h3>
