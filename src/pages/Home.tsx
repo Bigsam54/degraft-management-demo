@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { FeatureCard } from "@/components/ui/FeatureCard";
 import { StatCard } from "@/components/ui/StatCard";
 import { CTASection } from "@/components/ui/CTASection";
-import { Badge } from "@/components/ui/Badge";
+import { Badge } from "@/components/ui/badge";
 import {
   Building,
   Recycle,
@@ -288,8 +288,8 @@ export default function Home() {
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id as typeof activeTab)}
                 className={`px-6 py-3 rounded-lg font-medium transition-all ${activeTab === tab.id
-                    ? "bg-brand text-brand-foreground shadow-md border-2 border-brand"
-                    : "bg-panel border border-border text-muted hover:bg-secondary"
+                  ? "bg-brand text-brand-foreground shadow-md border-2 border-brand"
+                  : "bg-panel border border-border text-muted hover:bg-secondary"
                   }`}
               >
                 {tab.label}

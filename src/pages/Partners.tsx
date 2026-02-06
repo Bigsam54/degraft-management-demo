@@ -134,7 +134,7 @@ export default function Partners() {
                         href={partner.website}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="block mb-4 h-24 flex items-center justify-center"
+                        className="mb-4 h-24 flex items-center justify-center"
                       >
                         {partner.logoPath ? (
                           <img
